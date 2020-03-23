@@ -1,4 +1,4 @@
-# personal_manager
+# New Spectrum
 
 ## Build Setup
 
