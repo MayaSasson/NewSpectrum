@@ -1,4 +1,3 @@
-// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
-//
-// The variables you want to modify
-// $font-size-root: 20px;
+$body-font-family: 'Assistant', 'Arial-Rounded-MT-Bold-Font';
+$font-size-root: 18px;
+@import '~vuetify/src/styles/styles.sass';

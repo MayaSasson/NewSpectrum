@@ -1,0 +1,22 @@
+/* hebrew */
+@font-face {
+    font-family: 'Assistant';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./Assistant-Light.woff');
+}
+
+@font-face {
+    font-family: 'Assistant';
+    font-style: normal;
+    font-weight: lighter;
+    src: url('./Assistant-ExtraLight.woff');
+}
+
+/* English */
+@font-face {
+    font-family: 'Arial-Rounded-MT-Bold-Font';
+    font-weight: normal;
+    src: url('./Arial-Rounded-MT-Bold.woff');
+    font-style: normal;
+}

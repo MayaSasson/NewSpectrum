@@ -1,8 +1,8 @@
 {
-  "name": "NewSpectrum",
+  "name": "new-spectrum",
   "version": "1.0.0",
   "description": "The new molti managing",
-  "author": "manager_team",
+  "author": "NewSpectrum_Team",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
