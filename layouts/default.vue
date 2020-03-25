@@ -1,8 +1,6 @@
 <template>
   <v-app>
     <v-content>
-      <h1>היי</h1>
-      <h1>hey</h1>
       <v-container>
         <nuxt />
       </v-container>
