@@ -22,6 +22,5 @@ export default {
 <style scoped>
 #app {
   background-color: rgb(245,242,242);
-  font-weight: lighter;
 }
 </style>

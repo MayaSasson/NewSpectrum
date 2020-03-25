@@ -6,7 +6,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
+    titleTemplate: '%s',
     title: process.env.npm_package_name,
     meta: [
       { charset: 'utf-8' },
@@ -14,7 +14,6 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Assistant|Libre+Baskerville&display=swap%27' }
     ]
   },
   /*
