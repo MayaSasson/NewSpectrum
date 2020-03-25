@@ -14,7 +14,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Assistant|Libre+Baskerville&display=swap%27' }
+      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Assistant|Libre+Baskerville&display=swap%27' }
     ]
   },
   /*
@@ -25,7 +25,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    // '~/assets/fonts.css'
+    '~/assets/fonts/fonts.css'
   ],
   /*
   ** Plugins to load before mounting the App

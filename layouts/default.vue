@@ -1,6 +1,8 @@
 <template>
   <v-app>
     <v-content>
+      <h1>היי</h1>
+      <h1>hey</h1>
       <v-container>
         <nuxt />
       </v-container>
@@ -22,5 +24,6 @@ export default {
 <style scoped>
 #app {
   background-color: rgb(245,242,242);
+  font-weight: lighter;
 }
 </style>
