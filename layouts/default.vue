@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <TopToolbar/>
     <v-content>
       <v-container>
         <nuxt />
@@ -9,12 +10,16 @@
 </template>
 
 <script>
+import TopToolbar from '~/components/TopToolbar/TopToolbar'
 export default {
   data () {
     return {
       clipped: false,
       fixed: false,
     }
+  },
+  components: {
+    TopToolbar
   }
 }
 </script>
@@ -22,5 +27,6 @@ export default {
 <style scoped>
 #app {
   background-color: rgb(245,242,242);
+  direction: rtl;
 }
 </style>
