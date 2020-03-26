@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import TopToolbar from '~/components/TopToolbar/TopToolbar'
+import TopToolbar from '~/components/TopToolbar/TopToolbar';
 export default {
    middleware: [
     ({ redirect, route, error }) => {
-        route.path === '/' || error && redirect('/calendar');
+        (route.path === '/' || error) && redirect('/calendar');
     },
   ],
   components: {

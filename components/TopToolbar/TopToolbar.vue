@@ -3,17 +3,17 @@
         <img src='~/assets/images/logo.png'>
         <div class='tabs'>
             <nuxt-link
-              v-for="tab in tabs"
-              :key="tab.href"
-              :to="tab.href"
-              router
-              exact
-              class='tab'
-              active-class='active-tab'
+            v-for='tab in tabs'
+            :key='tab.href'
+            :to='tab.href'
+            router
+            exact
+            class='tab'
+            active-class='active-tab'
             >
                 <v-icon color='black' size='5vh'>{{ tab.icon }}</v-icon>
             </nuxt-link>
-      </div>
+        </div>
     </div>
 </template>
 
@@ -24,26 +24,26 @@ export default {
   data () {
     const tabs : Tab[] = 
     [
-        {
-          icon: 'mdi-calendar-blank',
-          href: '/calendar'
-        },
-        {
-          icon: 'mdi-download',
-          href: '/download'
-        },
-        {
-          icon: 'mdi-message-text',
-          href: '/feed'
-        },
-        {
-          icon: 'mdi-food',
-          href: '/orderfood'
-        },
-        {
-          icon: 'mdi-cart',
-          href: '/shopping'
-        }
+      {
+        icon: 'mdi-calendar-blank',
+        href: '/calendar'
+      },
+      {
+        icon: 'mdi-download',
+        href: '/download'
+      },
+      {
+        icon: 'mdi-message-text',
+        href: '/feed'
+      },
+      {
+        icon: 'mdi-food',
+        href: '/orderfood'
+      },
+      {
+        icon: 'mdi-cart',
+        href: '/shopping'
+      }
     ];
     return {
       tabs,
@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang='css' scoped>
 .top-toolbar {
   display: flex;
   justify-content: space-between;
