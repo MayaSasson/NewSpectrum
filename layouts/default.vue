@@ -12,12 +12,11 @@
 <script>
 import TopToolbar from '~/components/TopToolbar/TopToolbar'
 export default {
-  data () {
-    return {
-      clipped: false,
-      fixed: false,
-    }
-  },
+   middleware: [
+    ({ redirect, route, error }) => {
+        route.path === '/' || error && redirect('/calendar');
+    },
+  ],
   components: {
     TopToolbar
   }

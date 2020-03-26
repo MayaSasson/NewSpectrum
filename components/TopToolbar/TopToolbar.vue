@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class='top-toolbar'>
         <img src='~/assets/images/logo.png'>
         <div class='tabs'>
             <nuxt-link
@@ -11,7 +11,7 @@
               class='tab'
               active-class='active-tab'
             >
-                <v-icon color='black' medium>{{ tab.icon }}</v-icon>
+                <v-icon color='black' size='5vh'>{{ tab.icon }}</v-icon>
             </nuxt-link>
       </div>
     </div>
@@ -53,9 +53,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.header {
+.top-toolbar {
   display: flex;
   justify-content: space-between;
+  margin-top: 1vh;
 }
 .tabs {
   display: flex;
