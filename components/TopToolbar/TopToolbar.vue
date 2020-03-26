@@ -1,17 +1,19 @@
 <template>
     <div class="header">
         <img src='~/assets/images/logo.png'>
-        <v-list class="tabs" flat>
-            <v-list-item
-            v-for="tab in tabs"
-            :key="tab.title"
-            :to="tab.href"
-            router
-            exact
+        <div class='tabs'>
+            <nuxt-link
+              v-for="tab in tabs"
+              :key="tab.href"
+              :to="tab.href"
+              router
+              exact
+              class='tab'
+              active-class='active-tab'
             >
-                <v-icon class="tab" large>{{ tab.icon }}</v-icon>
-            </v-list-item>
-        </v-list>
+                <v-icon color='black' medium>{{ tab.icon }}</v-icon>
+            </nuxt-link>
+      </div>
     </div>
 </template>
 
@@ -24,27 +26,22 @@ export default {
     [
         {
           icon: 'mdi-calendar-blank',
-          title: 'calendar',
           href: '/calendar'
         },
         {
           icon: 'mdi-download',
-          title: 'download',
           href: '/download'
         },
         {
           icon: 'mdi-message-text',
-          title: 'messages',
-          href: '/messages'
+          href: '/feed'
         },
         {
           icon: 'mdi-food',
-          title: 'orderfood',
           href: '/orderfood'
         },
         {
           icon: 'mdi-cart',
-          title: 'shopping',
           href: '/shopping'
         }
     ];
@@ -63,13 +60,19 @@ export default {
 .tabs {
   display: flex;
 }
+.tabs a {
+  text-decoration: none;
+}
 .tab {
-  margin: auto 0 !important;
+  margin: auto 1vw;
   border-radius: 50%;
   border: black solid 0.5px;
-  padding: 3vh;
+  padding: 2vh;
 }
 .tab:hover {
+  background-color: lightgray;
+}
+.active-tab {
   background-color: lightgray;
 }
 </style>
