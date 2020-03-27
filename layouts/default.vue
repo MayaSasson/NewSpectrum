@@ -9,12 +9,14 @@
   </v-app>
 </template>
 
-<script>
-import TopToolbar from '~/components/TopToolbar/TopToolbar';
+<script lang='ts'>
+import TopToolbar from '~/components/TopToolbar/TopToolbar.vue';
+import { Context } from '@nuxt/types';
+
 export default {
    middleware: [
-    ({ redirect, route, isClient }) => {
-        (route.path === '/' || !isClient) && redirect('/calendar');
+    ({ redirect, route } : Context) => {
+        route.path === '/' && redirect('/calendar');
     },
   ],
   components: {
