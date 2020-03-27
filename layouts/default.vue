@@ -13,8 +13,8 @@
 import TopToolbar from '~/components/TopToolbar/TopToolbar';
 export default {
    middleware: [
-    ({ redirect, route, error }) => {
-        (route.path === '/' || error) && redirect('/calendar');
+    ({ redirect, route, isClient }) => {
+        (route.path === '/' || !isClient) && redirect('/calendar');
     },
   ],
   components: {
