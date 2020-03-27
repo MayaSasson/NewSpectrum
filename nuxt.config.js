@@ -50,6 +50,13 @@ module.exports = {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     treeShake: true,
+    defaultAssets: {
+      font: true,
+      icons: 'mdi'
+    },
+    icons: {
+      iconfont: 'mdi',
+    },
     theme: {
       primary: colors.blue.darken2,
       accent: colors.grey.darken3,

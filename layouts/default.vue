@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <TopToolbar/>
     <v-content>
       <v-container>
         <nuxt />
@@ -8,13 +9,18 @@
   </v-app>
 </template>
 
-<script>
+<script lang='ts'>
+import TopToolbar from '~/components/TopToolbar/TopToolbar.vue';
+import { Context } from '@nuxt/types';
+
 export default {
-  data () {
-    return {
-      clipped: false,
-      fixed: false,
-    }
+   middleware: [
+    ({ redirect, route } : Context) => {
+        route.path === '/' && redirect('/calendar');
+    },
+  ],
+  components: {
+    TopToolbar
   }
 }
 </script>
@@ -22,5 +28,6 @@ export default {
 <style scoped>
 #app {
   background-color: rgb(245,242,242);
+  direction: rtl;
 }
 </style>
