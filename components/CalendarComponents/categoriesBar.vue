@@ -5,7 +5,7 @@
                 mdi-plus
             </v-icon>
         </v-btn>
-        <div v-for="category in categories" :key="category.id" 
+        <div v-for="category in categories" :key="category.id"
              class="category" :style="{ backgroundColor: category.color }">
             {{ category.title }}
         </div>
@@ -15,19 +15,24 @@
 <script lang="ts">
 import Vue from 'vue';
 import { Category } from '@/models/Category';
+import { AllCategories } from "~/queries/Categories";
 
 export default Vue.extend({
-    data() {
-        return {
-            categories: [] as Category[]
+    apollo: {
+        allCategories: {
+            query: AllCategories
         }
     },
-    mounted() {
-        this.categories.push({
-            id: 1,
-            title: 'בדיקה', 
-            color: 'rgb(200, 150, 175)'
-        });
+    computed: {
+        categories(): Category[] {
+            return this.$data.allCategories.nodes.map((category: any) => {
+                return {
+                   id: category.id,
+                   color: category.color,
+                   title: category.title
+                }
+            })
+        }
     }
 })
 </script>
