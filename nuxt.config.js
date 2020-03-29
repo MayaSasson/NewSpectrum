@@ -1,5 +1,5 @@
 const colors = require('vuetify/es5/util/colors').default
-const HEBREW = require('vuetify/es5/locale/he').default;
+const hebrew = require('vuetify/es5/locale/he').default;
 
 module.exports = {
   mode: 'universal',
@@ -80,7 +80,7 @@ module.exports = {
     },
     lang: {
       locales: {
-        he: HEBREW
+        he: hebrew
       },
       current: 'he'
     }

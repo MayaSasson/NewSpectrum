@@ -1,9 +1,11 @@
-import { Category } from './Category';
+import Category from './Category';
 
-export interface Event {
+interface Event {
     id: number;
     title: string;
     startDate: Date;
     endDate: Date;
     category: Category;
 }
+
+export default Event;

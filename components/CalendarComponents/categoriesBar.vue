@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { Category } from '@/models/Category';
+import Category from '@/models/Category';
 import { AllCategories } from "~/queries/Categories";
 
 export default Vue.extend({

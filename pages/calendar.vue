@@ -15,7 +15,7 @@
 import Vue from 'vue';
 import CategoriesBar from '@/components/CalendarComponents/categoriesBar.vue';
 import { allEvents } from '@/queries/Events';
-import { Event } from '@/models/Event.ts';
+import Event from '@/models/Event.ts';
 
 export default Vue.extend({
     components: {
