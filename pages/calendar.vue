@@ -4,14 +4,17 @@
     justify-center
     align-center
   >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-    </v-flex>
+    <categories-bar />
   </v-layout>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
+import CategoriesBar from "@/components/CalendarComponents/categoriesBar.vue";
+
+export default Vue.extend({
+    components: {
+        CategoriesBar
+    }
+})
 </script>
