@@ -1,7 +1,7 @@
 <template>
     <div class="categories">
         <v-btn icon class="add-button">
-            <v-icon>
+            <v-icon color="black">
                 mdi-plus
             </v-icon>
         </v-btn>
@@ -13,12 +13,21 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { PropOptions } from 'vue';
 import { Category } from '@/models/Category';
 
 export default Vue.extend({
-    props: {
-        categories: Object as () => { categories: Category[] }
+    data() {
+        return {
+            categories: []  as Category[]
+        }
+    },
+    mounted() {
+        this.categories.push({
+            id: 1,
+            title: 'בדיקה', 
+            color: 'rgb(200, 150, 175)'
+        });
     }
 })
 </script>
@@ -26,14 +35,20 @@ export default Vue.extend({
 <style scoped>
     .add-button {
         border: solid black 1px;
+        height: 5vh;
+        width: 5vh;
     }
     .categories {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 90%;
+        background-color: white;
+        border: solid black 1px;
+        padding: 1vh 0;
     }
     .category {
+        font-weight: bold;
         border-radius: 9%;
         border: solid black 1px;
         width: 10%;
