@@ -13,13 +13,13 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropOptions } from 'vue';
+import Vue from 'vue';
 import { Category } from '@/models/Category';
 
 export default Vue.extend({
     data() {
         return {
-            categories: []  as Category[]
+            categories: [] as Category[]
         }
     },
     mounted() {

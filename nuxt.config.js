@@ -1,4 +1,5 @@
 const colors = require('vuetify/es5/util/colors').default
+const HEBREW = require('vuetify/es5/locale/he').default;
 
 module.exports = {
   mode: 'universal',
@@ -66,6 +67,12 @@ module.exports = {
       error: colors.deepOrange.accent4,
       success: colors.green.accent3
     },
+    lang: {
+      locales: {
+        he: HEBREW
+      },
+      current: 'he'
+    }
   },
   /*
   ** Build configuration
