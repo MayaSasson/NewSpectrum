@@ -1,4 +1,5 @@
 const colors = require('vuetify/es5/util/colors').default
+const hebrew = require('vuetify/es5/locale/he').default;
 
 module.exports = {
   mode: 'universal',
@@ -36,13 +37,24 @@ module.exports = {
   */
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/vuetify',
+    '@nuxtjs/vuetify'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/apollo'
   ],
+  /*
+    Apollo client configuration
+  */
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'http://localhost:9000/graphql'
+      }
+    }
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
@@ -66,6 +78,12 @@ module.exports = {
       error: colors.deepOrange.accent4,
       success: colors.green.accent3
     },
+    lang: {
+      locales: {
+        he: hebrew
+      },
+      current: 'he'
+    }
   },
   /*
   ** Build configuration
