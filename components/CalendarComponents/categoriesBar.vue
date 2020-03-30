@@ -1,14 +1,26 @@
 <template>
-    <div class="categories">
-        <v-btn icon class="add-button">
-            <v-icon color="black">
-                mdi-plus
+    <div class="bar">
+        <v-btn icon>
+            <v-icon color="black" @click="$emit('prevPressed')">
+                mdi-chevron-right            
             </v-icon>
         </v-btn>
-        <div v-for="category in categories" :key="category.id"
-             class="category" :style="{ backgroundColor: category.color }">
-            {{ category.title }}
+        <div class="categories">
+            <v-btn icon class="add-button">
+                <v-icon color="black">
+                    mdi-plus
+                </v-icon>
+            </v-btn>
+            <div v-for="category in categories" :key="category.id"
+                class="category" :style="{ backgroundColor: category.color }">
+                {{ category.title }}
+            </div>
         </div>
+        <v-btn icon>
+            <v-icon color="black" @click="$emit('nextPressed')">
+                mdi-chevron-left
+            </v-icon>
+        </v-btn>
     </div>
 </template>
 
@@ -25,13 +37,7 @@ export default Vue.extend({
     },
     computed: {
         categories(): Category[] {
-            return this.$data.allCategories.nodes.map((category: any) => {
-                return {
-                   id: category.id,
-                   color: category.color,
-                   title: category.title
-                }
-            })
+            return this.$data.allCategories.nodes;
         }
     }
 })
@@ -47,10 +53,7 @@ export default Vue.extend({
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 90%;
-        background-color: white;
-        border: solid black 1px;
-        padding: 1vh 0;
+        width: 100%;
     }
     .category {
         font-weight: bold;
@@ -60,5 +63,14 @@ export default Vue.extend({
         padding: 1% 0;
         text-align: center;
         margin-right: 1%;
+    }
+    .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        background-color: white;
+        border: solid black 1px;
+        padding: 1vh 0;
     }
 </style>
