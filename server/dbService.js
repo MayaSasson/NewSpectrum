@@ -1,12 +1,17 @@
 const express = require('express');
 const { postgraphile } = require('postgraphile');
+const cors = require('cors');
+
+require('dotenv').config();
 
 function initDBService (host) {
   const dbService = express();
 
+  dbService.use(cors());
+
 // add db service to the server
   dbService.use(postgraphile(
-    'postgress://postgres:NewSpectrum123!@35.223.39.246:5432/newspectrumdb',
+    process.env.DB_CON_STRING,
     'public',
     {
       watchPg : true,
@@ -16,7 +21,7 @@ function initDBService (host) {
   ));
 
 // Listen the DB service
-  dbService.listen(9000, host);
+  dbService.listen(process.env.DB_SERVICE_PORT, host);
 }
 
 module.exports = initDBService;
