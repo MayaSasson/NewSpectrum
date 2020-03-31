@@ -9,7 +9,7 @@
         @prevPressed="$refs.calendar.prev()"
      />
     <v-calendar
-        v-model="start"
+        v-model="startTimeCalendar"
         class="calendar"
         :events="calendarEvents"
         event-overlap-mode="stack"
@@ -36,7 +36,7 @@ interface CalendarEvent {
 export default Vue.extend({
     data() {
         return {
-            start: ''
+            startTimeCalendar: ''
         };
     },
     components: {
