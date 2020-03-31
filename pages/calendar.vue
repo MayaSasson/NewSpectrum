@@ -49,19 +49,23 @@ export default Vue.extend({
     },
     computed: {
         events() : Event[] {
-            return this.$data.allEvents.nodes.map((event: any) => {
-                return {
-                    id: event.id,
-                    startDate: event.startDate,
-                    endDate: event.endDate,
-                    title: event.title,
-                    category: {
-                        id: event.category.id,
-                        title: event.category.title,
-                        color: event.category.color
+            if (this.$data.allEvents !== undefined) {
+                return this.$data.allEvents.nodes.map((event: any) => {
+                    return {
+                        id: event.id,
+                        startDate: event.startDate,
+                        endDate: event.endDate,
+                        title: event.title,
+                        category: {
+                            id: event.category.id,
+                            title: event.category.title,
+                            color: event.category.color
+                        }
                     }
-                }
-            })
+                });
+            } else {
+                return [];
+            }
         }, 
         calendarEvents(): CalendarEvent[] {
             return this.events.map((event: Event) => {

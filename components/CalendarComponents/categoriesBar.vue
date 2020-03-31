@@ -37,7 +37,11 @@ export default Vue.extend({
     },
     computed: {
         categories(): Category[] {
-            return this.$data.allCategories.nodes;
+            if (this.$data.allCategories !== undefined) {
+                return this.$data.allCategories.nodes;
+            } else {
+                return [];
+            }
         }
     }
 })
