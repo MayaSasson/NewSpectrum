@@ -1,6 +1,8 @@
 const colors = require('vuetify/es5/util/colors').default
 const hebrew = require('vuetify/es5/locale/he').default;
 
+require('dotenv').config();
+
 module.exports = {
   mode: 'universal',
   /*
@@ -51,7 +53,7 @@ module.exports = {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://localhost:9000/graphql'
+        httpEndpoint: process.env.DB_SERVICE_URL
       }
     }
   },
