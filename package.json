@@ -16,13 +16,12 @@
     "@nuxt/types": "^0.6.4",
     "@nuxt/typescript-runtime": "^0.4.0",
     "@nuxtjs/apollo": "^4.0.0-rc19",
-    "cors": "^2.8.5",
+    "core-js": "^2.6.10",
     "cross-env": "^5.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
     "graphql-tag": "^2.10.3",
-    "nuxt": "^2.0.0",
-    "postgraphile": "^4.6.0"
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",

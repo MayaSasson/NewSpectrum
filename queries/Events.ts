@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const allEvents = gql`
+export const AllEvents = gql`
 query AllEvents {
     allEvents {
       nodes {

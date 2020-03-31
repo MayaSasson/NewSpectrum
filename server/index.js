@@ -1,8 +1,6 @@
 const express = require('express');
 const consola = require('consola');
 const { Nuxt, Builder } = require('nuxt');
-const { postgraphile } = require('postgraphile');
-const initDBService = require('./dbService');
 
 // Set services
 const app = express();
@@ -26,9 +24,6 @@ async function start () {
 
   // Give nuxt middleware to express
   app.use(nuxt.render);
-
-  //Init the db service and its port
-  initDBService(host);
 
   // Listen the server
   app.listen(port, host);
