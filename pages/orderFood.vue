@@ -9,7 +9,7 @@
       sm8
       md6
     >
-        <OrderFoodCard></OrderFoodCard>
+        <OrderFoodCard/>
     </v-flex>
   </v-layout>
 </template>
