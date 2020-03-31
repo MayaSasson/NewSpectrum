@@ -9,9 +9,14 @@
       sm8
       md6
     >
+        <OrderFoodCard></OrderFoodCard>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
+    import OrderFoodCard from "../components/OrderFoodComponents/orderFoodCard";
+    export default {
+        components: {OrderFoodCard},
+    }
 </script>
